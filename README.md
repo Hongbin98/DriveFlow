@@ -7,6 +7,21 @@ In autonomous driving, vision-centric 3D object detection recognizes and localiz
 ## Demo
 https://github.com/user-attachments/assets/38daed89-8b98-453e-abbb-743bed17ac2a
 
+## Citation
+If our DriveFlow method is helpful in your research, please consider citing our paper:
+```
+@inproceedings{lin2026driveflow,
+  title={DriveFlow: Rectified Flow Adaptation for Robust 3D Object Detection in Autonomous Driving},
+  author={Hongbin Lin, Yiming Yang, Chaoda Zheng, Yifan Zhang, Shuaicheng Niu, Zilu Guo, Yafeng Li, Gui Gui, Shuguang Cui, Zhen Li},
+  booktitle={The Association for the Advancement of Artificial Intelligence},
+  year={2026}
+}
+```
 
+## Acknowledgment
+The code is greatly inspired by (heavily from) the [FlowEdit🔗](https://github.com/fallenshock/FlowEdit).
+
+## Correspondence 
+Please contact Hongbin Lin by [linhongbinanthem@gmail.com] if you have any questions.  📬
 
 
