@@ -10,11 +10,11 @@ https://github.com/user-attachments/assets/38daed89-8b98-453e-abbb-743bed17ac2a
 ## Citation
 If our DriveFlow method is helpful in your research, please consider citing our paper:
 ```
-@inproceedings{lin2026driveflow,
+@article{lin2025driveflow,
   title={DriveFlow: Rectified Flow Adaptation for Robust 3D Object Detection in Autonomous Driving},
-  author={Hongbin Lin, Yiming Yang, Chaoda Zheng, Yifan Zhang, Shuaicheng Niu, Zilu Guo, Yafeng Li, Gui Gui, Shuguang Cui, Zhen Li},
-  booktitle={The Association for the Advancement of Artificial Intelligence},
-  year={2026}
+  author={Lin, Hongbin and Yang, Yiming and Zheng, Chaoda and Zhang, Yifan and Niu, Shuaicheng and Guo, Zilu and Li, Yafeng and Gui, Gui and Cui, Shuguang and Li, Zhen},
+  journal={arXiv preprint arXiv:2511.18713},
+  year={2025}
 }
 ```
 
