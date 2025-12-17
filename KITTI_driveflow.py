@@ -7,7 +7,7 @@ import random
 import numpy as np
 import yaml
 import os
-from utils import FlowEditSD3_with_TTA_adapt_abla_0728
+from utils import Driveflow_adapt
 import time 
 
 
@@ -109,7 +109,7 @@ if __name__ == "__main__":
         for i in range(T_steps):
             noise_dict[i] = torch.randn(1, 16, 46, 156,)
 
-        save_dir = "outputs/kitti_sd3_driveflow/snow/"
+        save_dir = "outputs/kitti_sd3_drive/snow/"
         for i in range(len(all_image_todo)):
             # if os.path.exists(f"{save_dir}/{all_image_todo[i].split('/')[-1]}"): continue
             image_src_path = all_image_todo[i]
@@ -131,7 +131,7 @@ if __name__ == "__main__":
             start_time = time.time()
             bboxes = load_kitti_bboxes(all_image_todo[i].split('/')[-1].replace('.png', ''), label_root, (orig_w, orig_h), target_size=image.size)
             if model_type == 'SD3':
-                x0_tar = FlowEditSD3_with_TTA_adapt_abla_0728(pipe,
+                x0_tar = Drive_adapt(pipe,
                                     scheduler,
                                     x0_src,
                                     src_prompt,
