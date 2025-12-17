@@ -2,7 +2,7 @@
 This is the official repository for the AAAI 2026 paper "*[DriveFlow: Rectified Flow Adaptation for Robust 3D Object Detection in Autonomous Driving](https://arxiv.org/abs/2511.18713)*".
 
 ## Abstract
-In autonomous driving, vision-centric 3D object detection recognizes and localizes 3D objects from RGB images. However, due to high annotation costs and diverse outdoor scenes, training data often fails to cover all possible test scenarios, known as the out-of-distribution (OOD) issue. Training-free image editing offers a promising solution for improving model robustness by training data enhancement without any modifications to pre-trained diffusion models. Nevertheless, inversion-based methods often suffer from limited effectiveness and inherent inaccuracies, while recent rectified-flow-based approaches struggle to preserve objects with accurate 3D geometry. In this paper, we propose DriveFlow, a Rectified Flow Adaptation method for training data enhancement in autonomous driving based on pre-trained Text-to-Image flow models. Based on frequency decomposition, DriveFlow introduces two strategies to adapt noise-free editing paths derived from text-conditioned velocities. 1) High-Frequency Foreground Preservation: DriveFlow incorporates a high-frequency alignment loss for foreground to maintain precise 3D object geometry. 2) Dual-Frequency Background Optimization: DriveFlow also conducts dual-frequency optimization for background, balancing editing flexibility and semantic consistency. Comprehensive experiments validate the effectiveness and efficiency of DriveFlow, demonstrating comprehensive performance improvements on all categories across OOD scenarios.
+In autonomous driving, vision-centric 3D object detection recognizes and localizes 3D objects from RGB images. However, due to high annotation costs and diverse outdoor scenes, training data often fails to cover all possible test scenarios, known as the out-of-distribution (OOD) issue. Training-free image editing offers a promising solution for improving model robustness by training data enhancement without any modifications to pre-trained diffusion models. Nevertheless, inversion-based methods often suffer from limited effectiveness and inherent inaccuracies, while recent rectified-flow-based approaches struggle to preserve objects with accurate 3D geometry. In this paper, we propose DriveFlow, a Rectified Flow Adaptation method for training data enhancement in autonomous driving based on pre-trained Text-to-Image flow models. Based on frequency decomposition, DriveFlow introduces two strategies to adapt noise-free editing paths derived from text-conditioned velocities. 1) High-Frequency Foreground Preservation: DriveFlow incorporates a high-frequency alignment loss for foreground to maintain precise 3D object geometry. 2) Dual-Frequency Background Optimization: DriveFlow also conducts dual-frequency optimization for background, balancing editing flexibility and semantic consistency. Comprehensive experiments validate the effectiveness and efficiency of DriveFlow, demonstrating comprehensive performance improvements across all categories in OOD scenarios.
 
 ## Demo
 https://github.com/user-attachments/assets/38daed89-8b98-453e-abbb-743bed17ac2a
@@ -34,12 +34,13 @@ pip install -r requirements.txt
 ## Usage
 ### Monocular 3D object detection
 ```
-python KITTI_driveflow.py
+#### stable-diffusion-3-medium
+python KITTI_driveflow.py    
 ```
-And you will the output images within the snowy scene, taking just serveral seconds (~5s/img on a single A100) !
+And you will see the output images within the snowy scene, taking just several seconds (~5s/img on a single A100)!
 
 ### Enhance existing methods
-Now you can simply leverage these generated images to enhance the training process of existing Monocular 3D Object Detectors (e.g., MonoFlex, MonoGround, MonoCD) since we reuse the initial object annotations.
+Now you can leverage these generated images to enhance the training process of existing Monocular 3D Object Detectors (e.g., MonoFlex, MonoGround, MonoCD) since we reuse the initial object annotations.
 
 ## Citation
 If our DriveFlow method is helpful in your research, please consider citing our paper:
