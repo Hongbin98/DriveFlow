@@ -7,6 +7,40 @@ In autonomous driving, vision-centric 3D object detection recognizes and localiz
 ## Demo
 https://github.com/user-attachments/assets/38daed89-8b98-453e-abbb-743bed17ac2a
 
+
+## Data Preparation
+We follow [DriveGEN](https://github.com/Hongbin98/DriveGEN) to prepare the datasets.
+
+### Monocular 3D object detection
+- 1️⃣ Download the KITTI dataset from the *[official website](https://www.cvlibs.net/datasets/kitti/)*
+- 2️⃣ Download the splits (the ImageSets folder) from *[MonoTTA](https://github.com/Hongbin98/MonoTTA/tree/main/ImageSets)*
+
+Then, link the data by
+```
+mv ./ImageSets ./your_path_KITTI
+mkdir data && cd data
+ln -s /your_path_KITTI ./data/
+```
+
+## Installation
+Build the conda environment
+```
+conda create -n driveflow python=3.10 -y
+conda activate driveflow
+# install pytorch like 'pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121'
+pip install -r requirements.txt
+```
+
+## Usage
+### Monocular 3D object detection
+```
+python KITTI_driveflow.py
+```
+And you will the output images within the snowy scene, taking just serveral seconds (~5s/img on a single A100) !
+
+### Enhance existing methods
+Now you can simply leverage these generated images to enhance the training process of existing Monocular 3D Object Detectors (e.g., MonoFlex, MonoGround, MonoCD) since we reuse the initial object annotations.
+
 ## Citation
 If our DriveFlow method is helpful in your research, please consider citing our paper:
 ```
@@ -23,5 +57,3 @@ The code is greatly inspired by (heavily from) the [FlowEdit🔗](https://github
 
 ## Correspondence 
 Please contact Hongbin Lin by [linhongbinanthem@gmail.com] if you have any questions.  📬
-
-
