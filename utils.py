@@ -152,7 +152,7 @@ def split_freq(x, sigma=3):
     return low, high
 
 
-def FlowEditSD3_with_TTA_adapt_abla_0728(pipe,
+def Driveflow_adapt(pipe,
     scheduler,
     x_src,
     src_prompt,
