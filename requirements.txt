@@ -1,0 +1,10 @@
+diffusers==0.30.1
+numpy==1.26.4
+transformers==4.44.0 
+accelerate
+sentencepiece
+protobuf
+matplotlib
+scipy
+kornia
+
